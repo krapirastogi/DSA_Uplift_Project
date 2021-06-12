@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+//kadane's algorithm
+int main() {
+	// your code goes here
+	int arr[50];
+	int n;
+	cin>>n;
+	for(int i =0;i<n;i++)
+	{
+	    cin>>arr[i];
+	} 
+	int mc,mg=arr[0];
+	for(int i= 1;i<=n-1;i++)
+	{ 
+	    mc=max(arr[i],mc+arr[i]);
+	    if(mc>mg)
+	    mg=mc;
+	}
+	cout<<mg;
+	return 0;
+}
